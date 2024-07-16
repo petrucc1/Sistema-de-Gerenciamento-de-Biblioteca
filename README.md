@@ -4,19 +4,14 @@ Este é um sistema de gerenciamento de biblioteca desenvolvido utilizando Flask 
 
 ## Índice
 
-- [Descrição do Projeto](#descrição-do-projeto)
-- [Funcionalidades](#funcionalidades)
-- [Pré-requisitos](#pré-requisitos)
-- [Instalação](#instalação)
-- [Configuração](#configuração)
-- [Como Usar](#como-usar)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Rotas da API](#rotas-da-api)
-- [Templates HTML](#templates-html)
-
-## Descrição do Projeto
-
-Este sistema permite que os usuários realizem operações de cadastro, consulta, atualização e exclusão de livros em uma biblioteca. Utilizando Flask para o backend e SQLAlchemy para a interação com o banco de dados SQL, o sistema é eficiente e seguro.
+1. [Funcionalidades](#funcionalidades)
+2. [Pré-requisitos](#pré-requisitos)
+3. [Instalação](#instalação)
+4. [Configuração](#configuração)
+5. [Como Usar](#como-usar)
+6. [Estrutura do Projeto](#estrutura-do-projeto)
+7. [Rotas da API](#rotas-da-api)
+8. [Templates HTML](#templates-html)
 
 ## Funcionalidades
 
