@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Gerenciamento de Biblioteca</title>
 </head>
+
 <body>
+
     <h1>Livros da Biblioteca</h1>
 
     <ul>
         {% for book in books %}
         <li>
-            {{ book.title }} por {{ book.author }}, publicado em {{ book.published_date }} (ISBN: {{ book.isbn }})
+            {{ book.title }} escrito por {{ book.author }}, publicado em {{ book.published_date }} (ISBN: {{ book.isbn
+            }})
+
             <a href="{{ url_for('edit_book', id=book.id) }}">Editar</a>
+            <a href="{{ url_for('delete_book', id=book.id) }}">Deletar</a>
+
             <form action="{{ url_for('delete_book', id=book.id) }}" method="post" style="display: inline;">
                 <button type="submit">Deletar</button>
             </form>
+
         </li>
         {% endfor %}
     </ul>
 
     <a href="{{ url_for('new_book') }}">Adicionar novo livro</a>
+
 </body>
+
 </html>
