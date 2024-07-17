@@ -38,4 +38,5 @@ def delete_book(id):
     book = Book.query.get_or_404(id)
     db.session.delete(book)
     db.session.commit()
+    flash('Livro excluído com sucesso!', 'success')
     return redirect(url_for('index'))
