@@ -21,7 +21,7 @@ def new_book():
         return redirect(url_for('index'))
     return render_template('new_book.html')
 
-@app.route('book/<int:id>/edit', methods=['GET', 'POST'])
+@app.route('/book/<int:id>/edit', methods=['GET', 'POST'])
 def edit_book(id):
     book = Book.query.get_or_404(id)
     if request.method == 'POST':
@@ -33,7 +33,7 @@ def edit_book(id):
         return redirect(url_for('index'))
     return render_template('edit_book.html', book=book)
 
-@app.route('book/<int:id>/delete', methods=['POST'])
+@app.route('/book/<int:id>/delete', methods=['POST'])
 def delete_book(id):
     book = Book.query.get_or_404(id)
     db.session.delete(book)
